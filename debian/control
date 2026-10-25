@@ -1,0 +1,9 @@
+Package: simple-uploader
+Version: 1.0.0
+Architecture: all
+Maintainer: Kerry Ritter <kerry@example.com>
+Depends: python3 (>= 3.10), python3-gi, gir1.2-gtk-3.0, wl-clipboard, xclip
+Description: Upload clipboard contents to S3-compatible storage
+ Confirm clipboard images, videos, files, text, or Markdown in a small GTK
+ dialog, upload to S3/R2/B2/MinIO, and copy the public URL to the clipboard.
+ Supports Wayland and X11, with shortcut setup for COSMIC and GNOME.

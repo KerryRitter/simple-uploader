@@ -1,0 +1,13 @@
+# Same keys as simple-screen-capture's ~/.config/capture/s3.conf.
+# Save to ~/.config/simple-uploader/s3.conf and chmod 600, or run --setup.
+# R2: endpoint is https://<account-id>.r2.cloudflarestorage.com
+S3_ENDPOINT=https://YOUR-ACCOUNT-ID.r2.cloudflarestorage.com
+S3_BUCKET=your-bucket
+S3_REGION=auto
+S3_ACCESS_KEY_ID=your-access-key-id
+S3_SECRET_ACCESS_KEY=your-secret-access-key
+S3_PATH_PREFIX=uploads/
+S3_PUBLIC_URL_BASE=https://files.example.com
+S3_ACL=
+# Optional for temporary AWS credentials:
+S3_SESSION_TOKEN=

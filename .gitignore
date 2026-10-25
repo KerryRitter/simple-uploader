@@ -1,0 +1,6 @@
+__pycache__/
+*.py[cod]
+*.deb
+dist/
+.venv/
+s3.conf

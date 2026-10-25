@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Simple Uploader
+Comment=Upload clipboard contents and copy a shareable URL
+Exec=simple-uploader
+Icon=document-send
+Terminal=false
+Categories=Utility;Network;
+StartupNotify=true
