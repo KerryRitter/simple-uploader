@@ -27,6 +27,30 @@ small scripts, `s3.conf` settings, and standard-library SigV4 uploader pattern.
 
 ## Install
 
+### Quick setup checklist (and AI assistant instructions)
+
+If you are setting this up on a machine (or were asked to "read the readme" and install it), follow these steps in order:
+
+1. **Ensure you are in the repository root** (clone `https://github.com/KerryRitter/simple-uploader.git` if needed).
+2. **Check system dependencies** for Python 3.10+, GTK 3 / PyGObject, and clipboard tools (`wl-clipboard` on Wayland, `xclip` on X11):
+   - On Pop!_OS, Ubuntu, or Debian, install any missing packages:
+     ```bash
+     sudo apt update && sudo apt install -y git python3-gi gir1.2-gtk-3.0 wl-clipboard xclip
+     ```
+   - On other Linux distros, install the equivalent packages with your package manager.
+3. **Install the app and desktop shortcut** (run as the normal desktop user, not `root`):
+   - On COSMIC or GNOME: `./install.sh`
+   - On other desktops: `./install.sh --no-shortcut` (then bind `Ctrl+Shift+Alt+U` to `~/.local/bin/simple-uploader` in desktop settings).
+4. **Check S3/R2 configuration:**
+   - Check if `~/.config/simple-uploader/s3.conf` or `~/.config/capture/s3.conf` already exists.
+   - If neither exists, either run `~/.local/bin/simple-uploader --setup` for the GUI dialog, or ask the user for their values and write `~/.config/simple-uploader/s3.conf` with mode `600` using [s3.conf.example](s3.conf.example).
+5. **Verify the install and tests:**
+   ```bash
+   ~/.local/bin/simple-uploader --check
+   PYTHONPATH=src python3 -m unittest discover -s tests -v
+   ```
+   `--check` validates local dependencies, clipboard backend, and config without uploading anything.
+
 ### Pop!_OS, Ubuntu, and Debian
 
 Run these commands in a terminal in your desktop session:
